@@ -1,0 +1,8 @@
+{
+  "name": "types-pdf",
+  "version": "0.1.0",
+  "description": "TypeScript definitions for PDF.js",
+  "author": "Vincent Kaestle",
+  "main": "lib/foo.js",
+  "license": "MIT"
+}
