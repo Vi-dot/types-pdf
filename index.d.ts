@@ -313,11 +313,21 @@ interface PDFJSUtilStatic {
 }
 
 interface PDFPageViewStatic {
+  pdfPage: PDFPageProxy;
+
   new(options: any) : PDFPageViewStatic;
   destroy(): void;
 
   setPdfPage(pdfPage: PDFPageProxy): void;
   draw(): any;
+  update(scale: number, rotation: number): void;
+  updatePosition(): void;
+}
+
+interface PDFLinkServiceStatic {
+  new(options?: any) : PDFLinkServiceStatic;
+  setDocument(pdfDocument, baseUrl);
+  setViewer(pdfViewer);
 }
 
 interface PDFJSStatic {
@@ -412,6 +422,11 @@ interface PDFJSStatic {
 	 */
 	disableFullscreen: boolean;
 
+  /**
+   * Disables textLayer
+   */
+  disableTextLayer: boolean;
+
 	/**
 	 * Enables CSS only zooming.
 	 */
@@ -447,6 +462,8 @@ interface PDFJSStatic {
 	Util: PDFJSUtilStatic;
 
   PDFPageView: PDFPageViewStatic;
+
+  PDFLinkService: PDFLinkServiceStatic;
 
 	/**
 	 * This is the main entry point for loading a PDF and interacting with it.
