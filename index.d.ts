@@ -466,6 +466,7 @@ interface PDFJSStatic {
   PDFLinkService: PDFLinkServiceStatic;
 
   LinkTarget: any;
+  externalLinkTarget: any;
 
 	/**
 	 * This is the main entry point for loading a PDF and interacting with it.
